@@ -291,8 +291,10 @@ footer {
         max-width: 350px;
     }
 }
+/* =================================
+   GENERAL STYLES
+================================= */
 
-/*  GENERAL STYLING */
 * {
     margin: 0;
     padding: 0;
@@ -300,106 +302,183 @@ footer {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f6f2;
-    color: #333;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
 }
 
-/*  HEADER  */
-header {
-    background-color: #3b2f2f;
-    padding: 20px 8%;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-}
 
-nav {
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar,
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 18px 8%;
+
+    background-color: #1f3c88;
+    color: white;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-nav h1 {
-    color: #f6c85f;
-    font-size: 30px;
-    letter-spacing: 1px;
+.navbar h1,
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
 }
 
+.nav-links,
 nav ul {
     display: flex;
+    align-items: center;
+    gap: 8px;
+
     list-style: none;
-    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
+.nav-links a,
 nav ul li a {
+    display: block;
+
+    padding: 10px 18px;
+
     color: white;
     text-decoration: none;
+
     font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s ease;
+    font-weight: 600;
+
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
 }
 
+.nav-links a:hover,
 nav ul li a:hover {
-    color: #f6c85f;
+    background-color: #ffd166;
+    color: #1f3c88;
+
+    transform: translateY(-2px);
 }
 
-/*  ABOUT HERO  */
+
+/* =================================
+   ABOUT HERO
+================================= */
+
 .about-hero {
-    background: linear-gradient(135deg, #ead7c0, #f7ead8);
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
-    padding: 90px 20px;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(31, 60, 136, 0.78),
+            rgba(31, 60, 136, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
 }
 
 .about-hero h2 {
-    color: #3b2f2f;
     font-size: 48px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    color: white;
 }
 
 .about-hero p {
-    color: #5f5550;
     font-size: 19px;
-    max-width: 650px;
-    margin: auto;
+    max-width: 700px;
+    color: #f1f5f9;
 }
 
-/*  ABOUT CONTENT  */
+
+/* =================================
+   ABOUT CONTENT
+================================= */
+
 .about-content {
-    width: 85%;
-    max-width: 1200px;
-    margin: 70px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    padding: 80px 8%;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
     gap: 30px;
+
+    flex-wrap: wrap;
+
+    background-color: #f5f7fa;
 }
 
-/*  ABOUT CARDS  */
+
+/* =================================
+   ABOUT CARDS
+================================= */
+
 .about-card {
     background-color: white;
-    padding: 35px;
+
+    width: 320px;
+
+    padding: 35px 25px;
+
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .about-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.14);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .about-card h2 {
-    color: #6b4f3a;
-    font-size: 25px;
-    margin-bottom: 18px;
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    color: #1f3c88;
 }
 
 .about-card p {
-    color: #666;
+    color: #555;
+
+    line-height: 1.7;
+
     margin-bottom: 15px;
 }
 
 .about-card ul {
     padding-left: 20px;
+
     color: #555;
 }
 
@@ -407,62 +486,170 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/*  OUR VALUES  */
+
+/* =================================
+   OUR VALUES SECTION
+================================= */
+
 .about-values {
-    background-color: #3b2f2f;
-    color: white;
-    padding: 75px 8%;
+    padding: 80px 8%;
+
     text-align: center;
+
+    background-color: #e8eef9;
 }
 
-.about-values>h2 {
-    font-size: 38px;
-    margin-bottom: 45px;
-    color: #f6c85f;
+.about-values > h2 {
+    font-size: 36px;
+
+    margin-bottom: 40px;
+
+    color: #1f3c88;
 }
 
-/*  VALUES CONTAINER  */
+
+/* =================================
+   VALUES CARDS
+================================= */
+
 .values-container {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+
+    justify-content: center;
+
     gap: 30px;
+
+    flex-wrap: wrap;
 }
 
-/*  VALUE CARDS */
 .value-card {
     background-color: white;
-    color: #333;
+
+    width: 300px;
+
     padding: 35px 25px;
+
     border-radius: 15px;
-    transition: 0.3s ease;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .value-card:hover {
     transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .value-card h3 {
-    color: #6b4f3a;
-    font-size: 23px;
+    font-size: 22px;
+
     margin-bottom: 15px;
+
+    color: #1f3c88;
 }
 
 .value-card p {
-    color: #666;
+    color: #555;
+
+    line-height: 1.7;
 }
 
-/* FOOTER */
+
+/* =================================
+   FOOTER
+================================= */
+
 footer {
-    background-color: #241d1d;
-    color: white;
-    text-align: center;
     padding: 25px;
-    margin-top: 0;
+
+    text-align: center;
+
+    background-color: #1f3c88;
+
+    color: white;
 }
 
 footer p {
-    font-size: 14px;
-    color: #ddd;
+    color: white;
 }
+
+
+/* =================================
+   MOBILE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar,
+    header nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .nav-links,
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+    .about-hero {
+        min-height: 350px;
+
+        padding: 50px 20px;
+    }
+
+    .about-hero h2 {
+        font-size: 36px;
+    }
+
+    .about-hero p {
+        font-size: 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 60px 5%;
+    }
+
+    .about-card {
+        width: 90%;
+
+        max-width: 350px;
+    }
+
+    .about-values {
+        padding: 60px 5%;
+    }
+
+    .about-values > h2 {
+        font-size: 30px;
+    }
+
+    .values-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .value-card {
+        width: 90%;
+
+        max-width: 350px;
+    }
+}
+
+
+
