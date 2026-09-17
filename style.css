@@ -1,0 +1,293 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background-color: #1f3c88;
+    color: white;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Store Name */
+
+.navbar h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Individual Links */
+
+.nav-links a {
+    display: block;
+
+    padding: 10px 18px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover Effect */
+
+.nav-links a:hover {
+    background-color: #ffd166;
+    color: #1f3c88;
+
+    transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(rgba(31, 60, 136, 0.75), rgba(31, 60, 136, 0.75)),
+        url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: heroAppear 1s ease-out;
+}
+
+.hero h2 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    color: #f1f5f9;
+}
+
+.hero .button {
+    background-color: #ffd166;
+    color: #1f3c88;
+}
+
+.hero .button:hover {
+    background-color: white;
+    color: #1f3c88;
+    transform: translateY(-4px);
+}
+
+
+/* Hero Animation */
+
+@keyframes heroAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1f3c88;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #162d66;
+}
+
+
+/* Services Section */
+
+.services {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #f5f7fa;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1f3c88;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: white;
+    width: 300px;
+    padding: 35px 25px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1f3c88;
+}
+
+.service-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Contact Section */
+
+.contact {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: #e8eef9;
+}
+
+.contact>p {
+    margin-bottom: 25px;
+    
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #1f3c88;
+    color: white;
+}
+
+
+/* Mobile Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
